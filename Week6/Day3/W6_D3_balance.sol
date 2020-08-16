@@ -12,7 +12,7 @@ contract HelloWorld{
     }
     
     address public owner;
-    uint currentBalance;
+    uint public currentBalance;
     
     //arrays and mapping
     mapping(address => Person) private people;
