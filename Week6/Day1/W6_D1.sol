@@ -57,10 +57,10 @@ contract HelloWorld{
     function insertPerson(Person memory newPerson) private{
         //newPerson.id = people.length;
         
-        // => assignment#1 (map to the last index created by add)
+        // => assignment#1 (map the last index created by add)
         indexOfAddresses[msg.sender] = (people.push(newPerson) - 1);
         
-        // => assignment#2 (map to an array of all indexes created by add)
+        // => assignment#2 (map an array of all indexes created by add)
         indexArrOfAddresses[msg.sender].push(indexOfAddresses[msg.sender]);
     }
     
