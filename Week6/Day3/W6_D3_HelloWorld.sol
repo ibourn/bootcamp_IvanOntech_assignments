@@ -1,8 +1,8 @@
-import "./IOTBC_Ownable.sol";
-import "./IOTBC_Destroyable.sol";
+import "./W6_D3_Ownable.sol";
+import "./W6_D3_Destroyable.sol";
 pragma solidity 0.5.12;
 
-contract HelloWorld is Ownable, Destroyable{
+contract HelloWorld is Ownable, Destroyable{ //=>corriger à is Destroyable!
    
     struct Person{
         string name;
