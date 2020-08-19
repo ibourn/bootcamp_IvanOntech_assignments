@@ -39,7 +39,7 @@ contract ERC20 is Ownable {
     }
 
     function mint(address account, uint256 amount) public onlyOwner {
-        require(account != address(0));
+        require(account != address(0), "mint to the 0 address");
 
         uint256 oldSupply = _totalSupply;
 
@@ -51,7 +51,7 @@ contract ERC20 is Ownable {
     }
 
     function transfer(address recipient, uint256 amount) public returns (bool) {
-        require(recipient != address(0));
+        require(recipient != address(0), "transfer to the 0 address");
 
         bool succes = true;
         uint256 oldSenderBalance = _balances[msg.sender];
