@@ -1,6 +1,7 @@
+import "./W6_D3_Ownable";
 pragma solidity 0.5.12;
 
-contract ERC20 {
+contract ERC20 is Ownable {
 
     mapping (address => uint256) private _balances;
 
@@ -37,7 +38,7 @@ contract ERC20 {
         return _balances[account];
     }
 
-    function mint(address account, uint256 amount) public {
+    function mint(address account, uint256 amount) public onlyOwner {
         require(account != address(0));
 
         uint256 oldSupply = _totalSupply;
