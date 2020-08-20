@@ -1,14 +1,43 @@
 
 
+/*
+colors
+*/
+.face, .ear, .hair, .fur, .fur:before, .fur:after, .front, .tail, .front_limb, .pawn{
+    background-color: rgb(255, 224, 122);
+}
+.muzzle{
+    background: rgb(243,229,183);
+ }
+
+.pupils{
+   background-color: #7c2525;
+ }
+ .eye, .glint{
+    background-color: #ffffff;
+ }
+.claw, .claw:after, .claw:before{
+    background-color: #000000;
+}
+
+/*
+general
+*/
 .container{
     border: 1px solid black;
     margin-top: 10%;
     margin-left: 30%;
 }
+.cat{
+    position: relative;
+}
 
+
+/*********************************************************
+face and muzzle
+*********************************************************/
 .face {
     border-bottom: 1px solid rgb(223, 193, 94);
-    background-color: rgb(255, 224, 122);
     width: 220px;
     height: 200px;
     border-radius: 50%;
@@ -17,43 +46,38 @@
     border-left: none;
 }
 .muzzle{
-        position: absolute;
-    
-        border-radius: 50%;
-        background: rgb(243,229,183);
-    
-            height: 100px;
-            width: 180px;
-            top: 90px;
-            left: 20px; 
-            z-index: 1;
-      
+    position: absolute;
+    border-radius: 50%;    
+    height: 100px;
+    width: 180px;
+    top: 90px;
+    left: 20px; 
+    z-index: 1;   
 }
+
+/*********************************************************
+truffle, mouth, mustache
+*********************************************************/
 .truffle{
     position: absolute;
-    
     border-radius: 20%;
-    /* background: rgba(145,101,81,1); */
-
-  
-        height : 0;
-        width : 0;
-        border-top : 20px solid rgb(250,153,108,1);
-        border-right : 10px solid transparent;
-        border-left : 10px solid transparent;
-       
-        top: 110px;
-        left: 100px; 
-        z-index: 1;
+    height : 0;
+    width : 0;
+    border-top : 20px solid rgb(250,153,108,1);
+    border-right : 10px solid transparent;
+    border-left : 10px solid transparent;
+    top: 110px;
+    left: 100px; 
+    z-index: 1;
 }
 .mouth{
     position: absolute;
-        width: 35px;
-        height: 40px;
-        border-radius: 50%;
-        box-shadow: 0px 2px 0 0 #000000;
-        left: 75px;
-        z-index: 1;
+    width: 35px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 0 0 #000000;
+    left: 75px;
+    z-index: 1;
 }
 .mouth:after{
     position: absolute;
@@ -75,18 +99,19 @@
     top: 138px;
     z-index: 1;
 }
+
 .mustache{
     position: absolute;
         width: 80px;
         height: 40px;
         border-radius: 50%;
-        box-shadow: 0px 1px 0 0 #000000;
+        box-shadow: 0px 1px 0 0 #363434;
         left: 180px;
         transform-origin: left;
         transform: rotate(-15deg);
         z-index: 1;
 }
-.mustache:before{
+.mustache:before, .mustache:after{
     position: absolute;
     content: "";
         width: 80px;
@@ -94,18 +119,15 @@
         border-radius: 50%;
         box-shadow: 0px 1px 0 0 #000000;
         transform-origin: left;
+}
+.mustache:before{
+   
         transform: rotate(-15deg);
         top: -5px;
 
 }
 .mustache:after{
-    position: absolute;
-    content: "";
-        width: 80px;
-        height: 40px;
-        border-radius: 50%;
-        box-shadow: 0px 1px 0 0 #000000;
-        transform-origin: left;
+    
         transform: rotate(15deg);
         top: 5px;
 }
@@ -113,6 +135,10 @@
         left: 40px;
         transform: scale(-1,1) rotate(-15deg);
 }
+
+/*********************************************************
+eyes, pupils and glint
+*********************************************************/
 .eyes{
     position: relative;
     top: 30px;
@@ -120,7 +146,6 @@
     z-index: 2;
 }
 .eye{
-    background-color: #ffffff;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -129,7 +154,6 @@
     
 }
 .pupils{
-    background-color: #7c2525;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -138,7 +162,6 @@
     left: 5px;
 }
 .glint{
-    background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
 }
@@ -154,12 +177,14 @@
     top: 30px;
     left: 15px;
 }
+/*********************************************************
+ears and inside ears
+*********************************************************/
 .ears{
     position: relative;
 }
 .ear{
     border-radius: 90% 0 90% 0;
-    background-color: rgb(255, 224, 122);
     height: 150px;
     width: 150px;
     top: -20px;
@@ -175,73 +200,103 @@
 }
 .ear_inside{
     border-radius: 90% 0 90% 0;
-    /* background-color: #fa996c; */
     height: 133px;
     width: 129px;
     top: 10px;
     position: absolute;
     transform: rotate(5deg);
     left: 10px;
-    background: rgb(41,27,21);
     background: linear-gradient(133deg, rgba(41,27,21,1) 0%, rgba(145,101,81,1) 30%, rgba(250,153,108,1) 52%, rgba(250,153,108,1) 100%);
 }
 .left_ear_inside{
-    /* background-color: #fa996c; */
-   
-    background: rgb(250,153,108);
     background: linear-gradient(129deg, rgba(250,153,108,1) 0%, rgba(250,153,108,1) 45%, rgba(145,101,81,1) 75%, rgba(41,27,21,1) 100%);
 }
 
-/* inteoeur oreil, couleur, lueur yeux, nez moustache...*/
+/*********************************************************
+fur top
+*********************************************************/
 .hair_head{
     position: relative;
     top: -5px;
 }
 .hair {
   position: absolute;
-  background: #F45B69;
 }
 .left_hair, .middle_hair, .right_hair{
     border-radius: 100% 00% 100% 100%;
+    width: 20px;
     transform: rotate(-45deg);
 }
 .left_hair {
-    position: absolute;
+    display: none;
     top: 5px;
     left: 80px;
-    width: 20px;
     height: 15px;
   }
   .middle_hair {
     top: 0px;
     left: 100px;
-    width: 20px;
     height: 20px;
   }
   .right_hair {
+      display: none;
     top: 5px;
     left: 120px;
-    width: 20px;
     height: 15px;
   }
-  .fur_head_left{
-    transform: rotate(-90deg);
-    left: 0px;
-  }
-.fur_head_right{
-    transform: rotate(90deg);
-    left: 0px;
-}
 
+/*********************************************************
+fur left and right
+*********************************************************/
+  .fur_head{
+    position: absolute;
+    top: 135px;
+    left: 7px;
+    transform: rotate(-135deg);
+}
+.fur {
+    position: absolute;
+    border-radius: 100% 0 100% 100%;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    left: 9px;  
+}
+.fur:before, .fur:after{
+    position: absolute;
+    content: "";
+    border-radius: 100% 0 100% 100%;
+    width: 20px;
+    height: 20px;
+}
+.fur:before {
+    top: -5px;
+    left: -10px;
+    height: 10px;
+  }
+  .fur:after {
+    top: 10px;
+    left: 8px;
+    height: 10px;
+  }
+
+  .right_fur{
+    position: absolute;
+      transform: scale(-1, -1);
+      top: 155px;
+      left: -135px;
+  }
+
+/*********************************************************
+body => front = trunk, belly, rear
+*********************************************************/
 .body{
     position: relative;
     top: -10px;
 }
   .front{
     position: absolute;
-
-    background-color: rgb(255, 224, 122);
-border-radius: 30% 30% 50% 50% / 40% 40% 50% 50%;
+    border-radius: 30% 30% 50% 50% / 40% 40% 50% 50%;
     height: 250px;
     width: 180px;
     top: -10px;
@@ -249,9 +304,7 @@ border-radius: 30% 30% 50% 50% / 40% 40% 50% 50%;
   }
   .rear{
     position: absolute;
-    background: rgb(223,193,94);
     background: radial-gradient(circle, rgba(223,193,94,1) 0%, rgba(223,193,94,1) 50%, rgba(255,224,122,1) 65%, rgba(255,224,122,1) 100%);
-
     border-bottom: 1px solid rgb(223, 193, 94);
     border-radius: 27% 27% 20% 20% / 35% 35% 65% 67%;
     height: 160px;
@@ -260,71 +313,66 @@ border-radius: 30% 30% 50% 50% / 40% 40% 50% 50%;
   }
   .belly{
     position: absolute;
-
     border-radius: 30% 30% 0 0/ 80% 50% 0 0;
-    background: rgb(243,229,183);
-background: linear-gradient(180deg, rgba(243,229,183,1) 0%, rgba(243,229,183,1) 29%, rgba(220,207,166,1) 75%, rgba(176,166,133,1) 95%);
-
-        height: 210px;
-        width: 130px;
-        top: 40px;
-        left: 25px; 
-        z-index: 1;
+    background: linear-gradient(180deg, rgba(243,229,183,1) 0%, rgba(243,229,183,1) 29%, rgba(220,207,166,1) 75%, rgba(176,166,133,1) 95%);
+    height: 210px;
+    width: 130px;
+    top: 40px;
+    left: 25px; 
+    z-index: 1;
   }
 .tail{
     position: absolute;
-    background-color: rgb(255, 224, 122);
     border-radius: 30% 30% 30% 30% /0 0 80% 50%;
     border-left: 5px solid rgb(255, 224, 122);
     height: 210px;
-        width: 30px;
-        top: 230px;
+    width: 30px;
+    top: 230px;
     left: 110px;
     transform-origin: top left;
     transform: rotate(-90deg);
 }
+
+/*********************************************************
+limb
+*********************************************************/
   .front_limb{
     position: absolute;
-border-bottom: 1px solid rgb(223, 193, 94);
-border-left: 1px solid #dfc15e;
-border-right: 1px solid rgb(223, 193, 94);
-    background-color: rgb(255, 224, 122);
-border-radius: 20% 20% 0 0;
+    border-bottom: 1px solid rgb(223, 193, 94);
+    border-left: 1px solid #dfc15e;
+    border-right: 1px solid rgb(223, 193, 94);
+    border-radius: 20% 20% 0 0;
     height: 200px;
     width: 50px;
     top: 50px;
     left: 0px;
     z-index: 3;
-
   } 
    .left_limb{
-    top: 50px;
-    left: 30px;
+           left: 30px;
     transform: rotate(-5deg);  
     border-radius: 20% 20% 80% 90% / 50% 20% 10% 10%;
-
   }   
   .right_limb{
-    top: 50px;
     left: 140px;
     transform: rotate(5deg); 
     border-radius: 20% 20% 90% 80% / 20% 50% 10% 10%; 
   }
 
+/*********************************************************
+pawn, claw, front and rear pawn
+*********************************************************/
   .pawn{
     position: absolute;
     border-top: 1px solid rgb(223, 193, 94);
-    background-color: rgb(255, 224, 122);
     border-radius: 20% 20% 20% 20%;
     height: 20px;
     width: 60px;
     top: 230px;
     z-index: 2;
-    
   }
   .claw{
-      position: absolute;
-    background-color: #000000;
+    position: absolute;
     width: 2px;
     height: 15px;
     top: 5px;
@@ -334,7 +382,6 @@ border-radius: 20% 20% 0 0;
   .claw:after, .claw:before{
     position: absolute;
     content: ' ';
-    background-color: #000000;
     width: 2px;
     height: 12px;
     top: 3px;
@@ -352,7 +399,6 @@ border-radius: 20% 20% 0 0;
     height: 25px;
     top: 225px;
     left: 30px;
-
   } 
   .rear_right_pawn{
     position: absolute;
@@ -360,18 +406,15 @@ border-radius: 20% 20% 0 0;
     height: 25px;
     top: 225px;
     left: 130px;
-
   }
   .front_left_pawn{
-    position: absolute;
     border-left: 1px solid rgb(223, 193, 94);
     border-right: 1px solid rgb(223, 193, 94);
-z-index: 4;
+    z-index: 4;
     left: 35px;
 
   } 
   .front_right_pawn{
-    position: absolute;
     border-left: 1px solid rgb(223, 193, 94);
     border-right: 1px solid rgb(223, 193, 94);
     z-index: 4;
