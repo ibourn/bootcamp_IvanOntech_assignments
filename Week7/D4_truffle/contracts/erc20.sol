@@ -34,7 +34,7 @@ contract ERC20 is Ownable {
     }
 
     function totalSupply() public view returns (uint256) {
-        return _totalSuppply;
+        return _totalSupply;
     }
 
     function balanceOf(address account) public view returns (uint256) {
